@@ -1,0 +1,11 @@
+{
+  "name": "auth0_rule_check",
+  "version": "1.0.0",
+  "description": "A simple app to check rules in auth0 associated applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jim Morrison",
+  "license": "MIT"
+}
