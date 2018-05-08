@@ -9,6 +9,8 @@
   "author": "Jim Morrison",
   "license": "MIT",
   "dependencies": {
+    "0": "0.0.0",
+    "auth": "0.0.9",
     "express": "^4.16.3"
   }
 }
