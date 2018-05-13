@@ -19,6 +19,14 @@ const strategy = new Auth0Strategy(
 
 passport.use(strategy);
 
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+
+passport.deserializeUser((user, done) => {
+  done(null, user);
+});
+
 module.exports = {
   default: passport
 };
