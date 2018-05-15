@@ -58,8 +58,11 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   Promise.all([req.managementApi.getRules(), req.managementApi.getClients()])
     .then(([rules, clients]) => {
-      req.rules = rules;
-      req.clients = clients;
+      req.clients = clients.map((client) => {
+        // find rules that don't include the client name
+        const clientRules = rules.filter(rule => rule.script.search(client.name) === -1);
+        return { ...client, rules: clientRules };
+      });
       next();
     })
     .catch(err => next(err));
