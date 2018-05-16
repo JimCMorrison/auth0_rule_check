@@ -73,11 +73,12 @@ html(lang="en")
           th(width='50%', data-column='rules')
             | Rules
       tbody
-        tr
-          td
-            = clients
-          td
-            = rules
+        each client in clients
+          tr
+            td
+              = client.name
+            td
+              = client.rules.map(function(rule) { return rule.name }).join(", ")
 
     footer.sc-footer(role="contentinfo")
       .container
