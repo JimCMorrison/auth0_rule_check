@@ -65,20 +65,21 @@ html(lang="en")
     section.jumbotron
       h2: img(src="https://cdn.auth0.com/website/styleguide/getting-started-icon.svg", alt="Jumbotron image")
       h1 Auth0 Rule Checker
-    table.table.table-fixed
-      thead
-        tr
-          th(width='50%', data-column='client')
-            | Client
-          th(width='50%', data-column='rules')
-            | Rules
-      tbody
-        each client in clients
-          tr
-            td
-              = client.name
-            td
-              = client.rules.map(function(rule) { return rule.name }).join(", ")
+    section(style={'margin': '0px 32px'})
+      table.table.table-fixed
+          thead
+            tr
+              th(width='50%', data-column='client')
+                | Client
+              th(width='50%', data-column='rules')
+                | Rules
+          tbody
+            each client in clients
+              tr
+                td
+                  = client.name
+                td
+                  = client.rules.map(function(rule) { return rule.name }).join(", ")
 
     footer.sc-footer(role="contentinfo")
       .container
