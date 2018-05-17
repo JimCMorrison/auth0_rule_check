@@ -2,13 +2,29 @@
   "name": "auth0_rule_check",
   "version": "1.0.0",
   "description": "A simple app to check rules in auth0 associated applications",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jim Morrison",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.3"
+    "auth0": "^2.9.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "passport": "^0.4.0",
+    "passport-auth0": "^0.6.1",
+    "pug": "^2.0.3",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "nodemon": "^1.17.4"
   }
 }
